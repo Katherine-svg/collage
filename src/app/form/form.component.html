@@ -1,0 +1,40 @@
+
+<form [formGroup]="FormData" (ngSubmit)="onSubmit(FormData.value)">
+    <label for="comment">Email</label>
+    <input type="email" 
+    name="Email" aria-describedby="emailHelp" 
+    placeholder="Enter email" formControlName="Email"
+    [ngClass]="{'error': FormData.get('Email').invalid && (FormData.get('Email').dirty || FormData.get('Email').touched)}">
+    
+    <div class="error" *ngIf="FormData.get('Email').invalid && (FormData.get('Email').dirty || FormData.get('Email').touched)" >
+           <small *ngIf="FormData.get('Email').errors.required">** Email is required.</small>
+           <small *ngIf="FormData.get('Email').errors.email">** Valid email is required.</small>
+    </div>
+    
+    <label for="comment">Your first and Last name</label>
+    <input type="text"
+    name="Fullname" placeholder="Name" formControlName="Fullname"
+    [ngClass]="{'error': FormData.get('Fullname').invalid && (FormData.get('Fullname').dirty || FormData.get('Fullname').touched)}" >
+    
+    <div class="error" *ngIf="FormData.get('Fullname').invalid && (FormData.get('Fullname').dirty || FormData.get('Fullname').touched)" >
+           <small *ngIf="FormData.get('Fullname').errors.required">** Name is required.</small>
+           <small *ngIf="FormData.get('Fullname').errors.maxlength">** Name cannot be more than 30 characters long.</small>
+           <small *ngIf="FormData.get('Fullname').errors.minlength" >** Name must be at least 5 characters long.</small>
+    </div>
+    
+    <label for="comment">Send me a message!</label>
+    <textarea formControlName="Comment" name="Comment" rows="10" cols="50"
+    [ngClass]="{'error': FormData.get('Comment').invalid && (FormData.get('Comment').dirty || FormData.get('Comment').touched)}">
+    </textarea>
+    
+    <div class="error" *ngIf="FormData.get('Comment').invalid && (FormData.get('Comment').dirty || FormData.get('Comment').touched)" >
+           <small *ngIf="FormData.get('Comment').errors.required">** Message is required.</small>
+    </div>
+    
+    <button type="submit" [disabled]="!FormData.valid">Submit</button>
+    <small *ngIf="!FormData.valid">
+        ** Name is required
+        ** Valid email is required
+        ** Message is required
+       </small>
+    </form>

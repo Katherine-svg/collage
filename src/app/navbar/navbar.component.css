@@ -1,0 +1,31 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+#logo {
+    display: block;
+    text-decoration: none;
+}
+  
+#logo img {
+  float: left;
+  padding: 14px 16px;
+  width: 20%;
+}
+
+div li a {
+    display: block;
+    float: right;
+    text-align: center;
+    padding: 35px 16px;
+    text-decoration: none;
+    color: #edf2f2;
+    transition: color 0.5s;
+  }
+
+div li a.active {
+    color: #3fb5cc;
+  }

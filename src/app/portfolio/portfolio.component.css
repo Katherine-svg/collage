@@ -1,0 +1,44 @@
+#shorBio{
+    width: 60%;
+    margin: 5% auto;
+}
+
+#gallery {
+    width: 85%;
+    margin: 3% auto;
+}
+
+img {
+    max-height: 750px;
+}
+
+#dream {
+    max-height: 550px;
+}
+
+section.project {
+    margin: 80px 0 80px 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px 32px;
+    grid-auto-flow: dense;
+}
+
+section.project div.artwork {
+    grid-column: 1 / span 8;
+    text-align: center;
+}
+
+section.project div.description {
+    grid-column: 9 / span 4;
+}
+
+section.project-alt div.artwork {
+    grid-column: 5 / span 8;
+    text-align: center;
+}
+
+section.project-alt div.description {
+    grid-column: 1 / span 4;
+}
+

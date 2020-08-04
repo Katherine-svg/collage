@@ -1,0 +1,46 @@
+form {
+    margin: 10% auto;
+    width: 50%;
+}
+
+input, textarea {
+    width: 100%;
+    margin: 3% 0;
+    padding: 1%;
+    border-radius: 0;
+}
+
+input:focus, textarea:focus {
+    border: 1px solid #085cd4;
+}
+
+label {
+    padding: 3% 0 0 0;
+}
+.error {
+    border: 2px solid #cc8068;
+    padding: 1%;
+    width: 100%;
+    margin: 1.5% 0;
+    border-radius: 0;
+}
+
+small {
+    
+    color: #cc8068;
+}
+
+button:disabled,
+button[disabled] {
+    border: 1px solid #cc8068;
+    background-color: #cca89d;
+    color: #cc8068;
+    padding: 5px 10px;
+  }
+
+  button {
+    border: 1px solid #edf2f2;
+    background-color: #085cd4;
+    color: #edf2f2;
+    padding: 5px 10px;
+    }
