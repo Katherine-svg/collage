@@ -29,3 +29,14 @@ div li a {
 div li a.active {
     color: #3fb5cc;
   }
+
+  @media (max-width: 600px) {
+
+  #logo img {
+      width: 35%;
+    }
+
+    div li a {
+      padding: 50px 8px;
+    }
+  }

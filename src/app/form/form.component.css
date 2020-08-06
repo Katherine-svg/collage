@@ -44,3 +44,11 @@ button[disabled] {
     color: #edf2f2;
     padding: 5px 10px;
     }
+
+@media (max-width: 860px) {
+
+form {
+    margin: 10% auto;
+        width: 80%;
+    }
+}

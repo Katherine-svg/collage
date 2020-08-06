@@ -13,7 +13,7 @@ img {
 }
 
 #dream {
-    max-height: 550px;
+    max-height: 450px;
 }
 
 section.project {
@@ -42,3 +42,27 @@ section.project-alt div.description {
     grid-column: 1 / span 4;
 }
 
+
+
+@media (max-width: 860px) {
+
+    img {
+        max-height: 550px;
+    }
+
+    #dream {
+        max-height: 350px;
+    }
+
+    section.project {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px 24px;
+    }
+    
+    section.project div.artwork
+    , section.project div.description
+    , section.project-alt div.artwork
+    , section.project-alt div.description {
+        grid-column: 1 / span 4;
+    }
+}
