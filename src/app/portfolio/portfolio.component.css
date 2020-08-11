@@ -46,6 +46,11 @@ section.project-alt div.description {
 
 @media (max-width: 860px) {
 
+    #shorBio{
+        width: 90%;
+        margin: 10% auto;
+    }
+
     img {
         max-height: 550px;
     }
